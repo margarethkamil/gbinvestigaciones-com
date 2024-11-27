@@ -17,12 +17,18 @@
 /* Global Styles */
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+    font-family: 'Epilogue';
+    /* line-height: 1.6; */
 }
 
-header, section, footer {
-    /* padding: 20px; */
+.home{
+    background-color:#E6EAFF;
+}
+
+section {
+     padding: 20px;
+     max-width: 1300px;
+     margin: auto;
 }
 
 /* Header Styling */
@@ -30,13 +36,13 @@ header, section, footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #333;
+    background-color: #E6EAFF;
     color: #fff;
     padding: 10px 20px;
 }
 
 .logo {
-    max-height: 50px;
+    max-height: 90px;
 }
 
 .nav-end {
@@ -49,49 +55,72 @@ header, section, footer {
 }
 
 .nav-end a {
-    color: #fff;
-    text-decoration: none;
+    color: #2e2e2e;
+    text-decoration: underline;
 }
 
 .contact {
-    background-color: #ff5722;
+    background-color: #3B9EBD;
     color: #fff;
     border: none;
     padding: 10px 15px;
     cursor: pointer;
 }
 
+.call {
+    background-color: #3B9EBD;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    width: 180px;
+}
+
 .contact:hover {
-    background-color: #e64a19;
+    background-color: #308098;
 }
 
 /* Page1 Section */
 .page1 {
     display: flex;
     flex-wrap: wrap; /* Ensures responsiveness */
-    gap: 10px;
+    /* gap: 10px; */
     margin-top: 20px;
     width: 100%;
+    background-color: #E6EAFF;
 }
 
 .half-container {
     flex: 1 1 calc(50% - 10px); /* Two columns with space in between */
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    height: 200px;
-    border: 1px solid #ddd;
-    background-color: #f9f9f9;
-    text-align: center;
+    /* background-color: #f9f9f9; */
     box-sizing: border-box;
+
+    .main-title{
+        margin: 0;
+        color: #308098;
+        font-size: 4rem;
+        font-weight: bold;
+    }
+
+    .main-subtitle{
+        margin: 0;
+        font-size: 2rem;
+    }
 }
 
 .left-container {
-    background-color: #f0f0f0;
+    padding: 10px;
+    /* background-color: #f0f0f0; */
 }
 
 .right-container {
-    background-color: #e0e0e0;
+    /* background-color: #e0e0e0; */
+    width: 100%;
+    max-height: 400px;
+    overflow: hidden;
 }
 footer {
     background-color: #333;
