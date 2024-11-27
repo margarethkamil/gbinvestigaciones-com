@@ -1,0 +1,137 @@
+/* Regular font */
+@font-face {
+    font-family: 'Epilogue';
+    src: url('assets//fonts/Epilogue-VariableFont_wght.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 100 900; /* Adjust weight range if needed */
+}
+
+/* Italic font */
+@font-face {
+    font-family: 'Epilogue';
+    src: url('assets/fonts/Epilogue-Italic-VariableFont_wght.ttf') format('truetype');
+    font-style: italic;
+    font-weight: 100 900; /* Adjust weight range if needed */
+}
+
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header, section, footer {
+    /* padding: 20px; */
+}
+
+/* Header Styling */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+.logo {
+    max-height: 50px;
+}
+
+.nav-end {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.nav-end a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.contact {
+    background-color: #ff5722;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.contact:hover {
+    background-color: #e64a19;
+}
+
+/* Page1 Section */
+.page1 {
+    display: flex;
+    flex-wrap: wrap; /* Ensures responsiveness */
+    gap: 10px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.half-container {
+    flex: 1 1 calc(50% - 10px); /* Two columns with space in between */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.left-container {
+    background-color: #f0f0f0;
+}
+
+.right-container {
+    background-color: #e0e0e0;
+}
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-end {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .page1 {
+        flex-direction: column;
+    }
+
+    .half-container {
+        flex: 1 1 100%; /* Each takes full width on small screens */
+        margin-bottom: 10px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .nav-end {
+        gap: 10px;
+    }
+
+    .half-container {
+        flex: 1 1 50%;
+    }
+}
