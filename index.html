@@ -1,54 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Responsive Design</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
 
-        <div class="header">
-            <img class="logo" src="assets/logo.png" alt="Company Logo">
-            <ul class="nav-end">
-                <li><a href="#about">Sobre Nosotros</a></li>
-                <li><a href="#services">Servicios</a></li>
-                <button class="contact">+507 6631-6612</button>
-            </ul>
+    <div class="popup-overlay" id="popup">
+        <div class="popup-box">
+          <img src="./assets/fingerprint-black.jpg" alt="Fingerprint" class="popup-image" />
+          <p class="popup-message">No pierdas la oportunidad y contacta YA al 6631-6612!</p>
+          <button class="popup-close-btn" onclick="closePopup()">Cerrar</button>
         </div>
-        <section class="home">
-        <div class="page1">
-            <div class="half-container left-container">
-                <h1 class="main-title">GB</h1> 
-                <h2 class="main-subtitle">Detectives Privados</h2>
-                <p>Coroboramos y conseguimos todo tipo de información</p>
-                <br>
-                <button class="call">Chatear al Whatsapp</button>
-            </div>
-            <div class="half-container right-container">
-                <img src="./assets/fingerprint-black.jpg" alt="">
-            </div>
+      </div>
+
+
+    <div class="header">
+      <img class="logo" src="assets/logo.png" alt="Company Logo" />
+      <ul class="nav-end">
+        <li><a href="#about">Sobre Nosotros</a></li>
+        <li><a href="#services">Servicios</a></li>
+        <a href="tel:66316612"><button class="contact">+507 6631-6612</button></a>
+      </ul>
+    </div>
+    <section id="home">
+      <div class="page1">
+        <div class="half-container left-container">
+          <h1 class="main-title">GB</h1>
+          <h2 class="main-subtitle">Detectives Privados</h2>
+          <p>Coroboramos y conseguimos todo tipo de información</p>
+          <br />
+          <button class="call" onclick="openWhatsapp()">Chatear al Whatsapp →</button>
         </div>
+        <div class="half-container right-container">
+          <img src="./assets/fingerprint-black.jpg" alt="" />
+        </div>
+      </div>
     </section>
 
     <section id="about">
-        <h2>About Us</h2>
+      <div class="half-container left-container">
+        <h2>Sobre Nosotros</h2>
+        <h1 class="main-title">
+          LA CONFIDENCIALIDAD ES NUESTRA CARTA DE PRESENTACION
+        </h1>
+        <img src="./assets/secret.jpg" alt="" />
+      </div>
+      <div class="half-container right-container">
+        <h2>SOMOS UNA EMPRESA FUNDADA EN 1992</h2>
         <p>
-            Learn more about our team and our mission to help you with forensic and
-            legal matters.
+          Conocidos por ser idóneos en el área, pioneros con más de 30 años de
+          experiencia en todo tipo de investigaciones privadas. <br />Hemos
+          trabajado con empresas nacionales e internacionales.
         </p>
+
+        <ul>
+          <li>Detectives privados</li>
+          <li>Peritos Idóneos</li>
+          <li>Criminalística</li>
+          <li>Ciencias Forenses</li>
+        </ul>
+        <br />
+        <a href="tel:66316612"><button class="call">Contactar →</button></a>
+      </div>
     </section>
 
     <section id="services">
-        <h2>Our Services</h2>
-        <p>
-            We offer a range of forensic services, including investigations for
-            divorce, infidelity, and other legal cases.
-        </p>
+      <div class="half-container left-container">
+        <h2>Servicios</h2>
+        <h1 class="main-title">Nuestros Servicios</h1>
+      </div>
+      <div class="half-container right-container">
+        <br />
+      </div>
+
+      <div class="box-container">
+        <div class="box">
+          <ul>
+            <li>Infidelidad Matrimonial</li>
+            <li>Vigilancia Controlada</li>
+            <li>Pruebas de divorcio</li>
+            <li>Filmaciones y Fotos para pruebas</li>
+            <li>Investigaciones de Hurto Laboral</li>
+            <li>Ubicacion Satelital EN TIEMPO REAL</li>
+            <li>Levantado de Huellas dactilares</li>
+            <li>Record personal, verificación de identidad</li>
+          </ul>
+          <br />
+          <br />
+          <a class="green-link" href="tel:66316612">Contactar →</a>
+        </div>
+        <div class="box">
+          <ul>
+            <li>Infidelidad Matrimonial</li>
+            <li>Vigilancia Controlada</li>
+            <li>Pruebas de divorcio</li>
+            <li>Filmaciones y Fotos para pruebas</li>
+            <li>Investigaciones de Hurto Laboral</li>
+            <li>Ubicacion Satelital EN TIEMPO REAL</li>
+            <li>Levantado de Huellas dactilares</li>
+            <li>Record personal, verificación de identidad</li>
+          </ul>
+
+          <br />
+          <br />
+          <a class="green-link" href="tel:66316612">Contactar →</a>
+        </div>
+        <div class="img-box">
+          <img src="/assets/camera.jpg" alt="" />
+        </div>
+      </div>
+      <p></p>
     </section>
 
+    <hr style="padding-bottom: 20px" />
+
     <footer>
-        <p>&copy; 2024 GB Investigaciones Privadas. All rights reserved.</p>
+      <p>
+        &copy; 2024 GB Investigaciones Privadas. <br />
+        All rights reserved.
+      </p>
     </footer>
-</body>
+
+    <!-- SCRIPTS -->
+    <script>
+      function openWhatsapp() {
+        var message = "Hola, vengo de la página web y quiero saber más sobre sus servicios";
+        var phoneNumber = "+50766316612";
+        var whatsappUrl = "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(message);
+        window.open(whatsappUrl, "_blank");
+      }
+    </script>
+    <script src="functions.js"></script>
+  </body>
 </html>
